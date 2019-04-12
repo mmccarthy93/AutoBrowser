@@ -20,9 +20,9 @@ browser = webdriver.Chrome(options=chrome_options)
 browser.get('https://www.reddit.com/login')
 time.sleep(1)
 reddit_username = browser.find_element_by_id("loginUsername")
+reddit_username.send_keys("USERNAME") # Replace USERNAME with actual username.
 reddit_password = browser.find_element_by_id("loginPassword")
-  reddit_username.send_keys("USERNAME")
-reddit_password.send_keys("PASSWORD")
+reddit_password.send_keys("PASSWORD") # Replace PASSWORD with actual password
 login_reddit = browser.find_element_by_xpath("//*[@type='submit']")
 login_reddit.submit()
 
@@ -34,14 +34,14 @@ browser.switch_to.window(window_two)
 browser.get('https://www.gmail.com')
 time.sleep(1)
 gmail_username = browser.find_element_by_id("identifierId")
-gmail_username.send_keys("EMAIL ADDRESS")
+gmail_username.send_keys("EMAIL ADDRESS") # Replace EMAIL ADDRESS with actual email address.
 nextButton = browser.find_element_by_id('identifierNext')
 nextButton.click()
 browser.implicitly_wait(4)
 WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@type='password']")))
 WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "//input[@type='password']")))
 gmail_password = browser.find_element_by_xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/content/section/div/content/div[1]/div/div[1]/div/div[1]/input")
-gmail_password.send_keys("PASSWORD")
+gmail_password.send_keys("PASSWORD") # Replace PASSWORD with actual password.
 nextButton = browser.find_element_by_id('passwordNext')
 nextButton.click()
 
@@ -52,9 +52,9 @@ browser.switch_to.window(window_three)
 browser.get('https://github.com/login')
 time.sleep(1)
 github_username = browser.find_element_by_id("login_field")
-github_username.send_keys("USERNAME")
+github_username.send_keys("USERNAME") # Replace USERNAME wth actual username.
 github_password = browser.find_element_by_id("password")
-github_password.send_keys("PASSWORD")
+github_password.send_keys("PASSWORD") # Replace PASSWORD with actual password.
 login_github = browser.find_element_by_xpath("//*[@type='submit']")
 login_github.submit()
 
