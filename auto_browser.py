@@ -62,10 +62,10 @@ login_github.submit()
 browser.execute_script("window.open()")
 window_four = browser.window_handles[3]
 browser.switch_to.window(window_four)
-browser.get('https://www.youtube.com/watch?v=DmYscyOAS5s&t=5994s')
+browser.get('https://www.youtube.com/watch?v=DmYscyOAS5s&t=5994s') # Change youtube link to preferred music mix.
 
 # Open Google Homepage
 browser.execute_script("window.open()")
 window_five = browser.window_handles[4]
 browser.switch_to.window(window_five)
-browser.get('https://www.google.com')
+browser.get('https://www.google.com') 
