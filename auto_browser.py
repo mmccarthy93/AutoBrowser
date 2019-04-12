@@ -57,3 +57,15 @@ github_password = browser.find_element_by_id("password")
 github_password.send_keys("PASSWORD")
 login_github = browser.find_element_by_xpath("//*[@type='submit']")
 login_github.submit()
+
+# Open youtube music mix
+browser.execute_script("window.open()")
+window_four = browser.window_handles[3]
+browser.switch_to.window(window_four)
+browser.get('https://www.youtube.com/watch?v=DmYscyOAS5s&t=5994s')
+
+# Open Google Homepage
+browser.execute_script("window.open()")
+window_five = browser.window_handles[4]
+browser.switch_to.window(window_five)
+browser.get('https://www.google.com')
